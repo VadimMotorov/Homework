@@ -1,0 +1,129 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+git branch Postman
+git branch Jmeter
+git branch CheckLists
+git branch Bug_Report
+git branch SQL
+git branch Charles
+git branch Mobile_testing
+
+git branch - проверить, что ветки созданы
+
+результат:
+ Bug_Reports
+  Charles
+  Checklists
+  Jmeter
+  Mobile_Testing
+  Postman
+  SQL
+
+* main
+
+
+2. Запушить все ветки на внешний репозиторий
+
+git push -u origin Bug_Reports
+git push -u origin Charles
+git push -u origin CheckLists
+git push -u origin Jmeter
+git push -u origin Mobile_Testing
+git push -u origin Postman
+git push -u origin SQL
+
+проверить в GitHub => branches - все ветки есть
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+
+git checkout Bug_Reports
+
+cat > Bug_Reports.txt
+
+ID
+Summary
+Severity
+Priority
+Steps to reproduse
+Expected result
+Actual result
+Attachements
+Build
+Environment
+Status
+Author
+
+CTRL+C
+
+4. Запушить структуру багрепорта на внешний репозиторий
+git status
+git add .
+git commit -m "add file"
+git push
+
+обновить GitHub, проверить наличие файла Bug_Reports.txt в ветке main
+
+5. Вмержить ветку Bag Reports в Main
+git merge Bug_Reports -m "merge Bug_Reports"
+ls -la
+
+6. Запушить main на внешний репозиторий.
+git push
+обновить GitHub, проверить наличие файла Bug_Reports.txt в ветке main
+
+7. В ветке CheckLists набросать структуру чек листа.
+git checkout CheckLists
+cat > Checklist.txt
+
+List of checks
+Status
+Build
+Environment
+Tester
+Result
+
+CTRL+C
+
+8. Запушить структуру на внешний репозиторий
+
+git status
+git add .
+git commit -m "add file"
+git push -u origin CheckLists
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+Pull request
+
+VadimMotorov wants to merge 1 commit into main from CheckLists
+
+Merge pull request
+Confirm merge
+
+Pull request successfully merged and closed
+
+В ГитХабе открыть ветку main и проверить наличие файла Checklist.txt
+
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+git checkout main
+git fetch
+
+result:
+ * [new branch]      CheckLists -> origin/CheckLists
+
+git pull
+ls -la
+
+
+
+
+
